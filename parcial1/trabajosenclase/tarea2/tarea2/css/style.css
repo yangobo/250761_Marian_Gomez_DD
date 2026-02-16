@@ -1,0 +1,162 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:sans-serif;
+  background:rgb(0, 0, 0);
+}
+
+
+
+.grid-principal{
+  display:grid;
+  grid-template-rows:auto auto;
+  gap:6px;
+  padding:6px;
+}
+
+.fila-arriba{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:6px;
+}
+
+.fila-abajo{
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr;
+  gap:6px;
+}
+
+.caja{
+  background:black;
+  border:1px solid white;
+  position:relative;
+  height:60vh;
+  overflow:hidden;
+}
+
+
+
+.caja-parallax{
+  perspective:800px;
+}
+
+.parallax-escena{
+  position:absolute;
+  inset:0;
+}
+
+.layer{
+  position:absolute;
+  inset:0;
+  background-position:center;
+  background-repeat:no-repeat;
+  background-size:contain;
+}
+
+
+.layer.fondo{
+  background-image:url("../recursos/fondo.png");
+  background-size:cover;
+}
+
+.layer.nino{
+  background-image:url("../recursos/nino.png");
+}
+
+.layer.luz{
+  background-image:url("../recursos/luz.png");
+}
+
+.layer.closet{
+  background-image:url("../recursos/closset.png");
+}
+
+
+.caja2{
+  overflow-y:auto;
+  position:relative;
+}
+
+.caja2::after{
+  content:"";
+  display:block;
+  height:140vh;
+}
+#fondo{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  z-index:0;
+}
+
+.caja2 img{
+  position:absolute;
+  width:22%;
+  height:auto;
+}
+
+#conejo{ right:60%; bottom:0; }
+#jconejo{ right:30%; bottom:0; }
+#pconejo{ right:10%; bottom:0; }
+
+
+#titulo{
+  position:absolute;
+  top:10px;
+  left:10px;
+  color:white;
+  z-index:5;
+}
+
+#caja3{
+  position:relative;
+  overflow:hidden;
+}
+
+#conejoClick{
+  position:absolute;
+  bottom:0;
+  left:50%;
+  transform:translateX(-50%);
+  width:320px;
+  cursor:pointer;
+  transition:bottom .25s ease;
+
+}
+
+.caja4{
+  position: relative;
+  overflow: hidden;
+}
+
+#conejoHover{
+  position: absolute;
+  bottom: 0;
+  right: 10%;
+  width: 35%;
+  height: auto;
+  transition: transform 0.4s ease;
+}
+
+
+
+.caja5{
+  position: relative;
+  overflow: hidden;
+}
+
+#conejoLoad{
+  position: absolute;
+  top: -120px;         
+  left: 50%;
+  transform: translateX(-50%);
+  width: 500px;        
+  height: auto;
+  transition: top 1.2s ease;
+}

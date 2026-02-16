@@ -1,0 +1,213 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    overflow: hidden;
+     scroll-behavior: smooth;
+}
+
+body{
+    width: 100vw;
+    height: auto;
+    perspective: 1px;
+    transform-style: preserve-3d;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    background-color: black; 
+}
+
+
+/* ---------------- NAV ---------------- */
+
+.contenedor-1{
+    width: 100%;
+    
+    min-height: 100vh;
+    position: relative;
+    transform-style: preserve-3d;
+}
+
+nav{
+    width: 100%;
+    height: auto;
+    background-color: rgb(15, 7, 22);
+    position: relative;
+    z-index: 1000;
+}
+
+#logo{
+    position: absolute;
+    left: 2vw;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 9vh;
+}
+
+ul{
+    display: flex;
+    gap: 4vw;
+    justify-content: flex-end;
+    list-style: none;
+    padding: 2vh 5vw;
+}
+
+li a{
+    font-size: 4vh;
+    color: white;
+    text-decoration: none;
+}
+
+/* ---------------- HEADER 3D ---------------- */
+
+.contenedor-1::before{
+    content: "";
+    position: fixed;  /* CAMBIA absolute por fixed */
+    inset: 0;
+    top: -10vh;
+    height: calc(125vh);
+
+    background-image: url("../recursos/fondo1.png");
+    background-size: cover;
+    background-position: center;
+
+    transform: translateZ(-2px) scale(3);
+    z-index: 1;
+}
+
+/* CAMA */
+.cama {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) translateZ(-0.7px) scale(1.7);
+    width: 100%;
+    z-index: 2;
+}
+
+.cama img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* NIÑO */
+.nino {
+    position: absolute;
+    bottom: 0%;   
+    left: 50%;
+    transform: translateX(-50%) translateY(10%) translateZ(-0.7px) scale(1.7);
+    z-index: 3;
+    width: 100%;
+    text-align: center;
+}
+
+.nino img {
+    height: 80vh;
+    width: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* CLOSET - MÁS LENTO */
+.closet{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    transform: translateZ(-1px) scale(2);
+    z-index: 4;
+}
+
+/* LUZ */
+.luz{
+    position: absolute;
+    inset: 0;
+    transform: translateZ(-0.2px) scale(1.2);
+    z-index: 5;
+    opacity: 0.8;
+    pointer-events: none;
+}
+
+/* TITULOS - MÁS RÁPIDOS */
+.titulo{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%) translateZ(-0.2px) scale(1.2);
+    color: white;
+    font-size: 70px;
+    z-index: 10;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    white-space: nowrap;
+}
+
+.subtitulo{
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translateX(-50%) translateZ(-0.2px) scale(1.2);
+    color: white;
+    font-size: 30px;
+    z-index: 10;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    white-space: nowrap;
+}
+/* Espacio extra al final */
+
+
+/* ELIMINADO: .espacio - ya no lo necesitas */
+
+/* ---------------- GRID ---------------- */
+
+.grid-animatronicos{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 1rem;
+    background-color: black;
+    position: relative;
+    z-index: 100;
+   
+   
+  
+}
+
+.card{
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+    position: absolute;
+    transition: opacity .4s ease;
+}
+
+.info{
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0,0,0,.9);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+    transition: opacity .4s ease;
+    padding: 2rem;
+}
+
+.card:hover img{
+    opacity: 0;
+}
+
+.card:hover .info{
+    opacity: 1;
+}
+
