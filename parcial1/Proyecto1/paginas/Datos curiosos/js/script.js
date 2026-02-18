@@ -1,7 +1,7 @@
-// Esperar a que cargue la página
+
 document.addEventListener('DOMContentLoaded', function() {
     
-    // Seleccionar todas las cartas con un solo querySelectorAll
+  
     const cartas = document.querySelectorAll('.carta-curiosidad');
     
     // Función para animar con efecto cascada
@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Ejecutar la animación
     animarCartas();
     
-    // Opcional: reiniciar animación con click en el grid
+   
     const grid = document.querySelector('.grid-curiosidades');
     if (grid) {
         grid.addEventListener('click', () => {
