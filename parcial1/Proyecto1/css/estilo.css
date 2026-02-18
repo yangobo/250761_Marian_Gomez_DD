@@ -65,7 +65,7 @@ li a{
     position: fixed;  
     inset: 0;
     top: -10vh;
-    height: calc(130vh);
+    height: calc(160vh);
     background-image: url("../recursos/fondo1.png");
     background-size: cover;
     background-position: center;
