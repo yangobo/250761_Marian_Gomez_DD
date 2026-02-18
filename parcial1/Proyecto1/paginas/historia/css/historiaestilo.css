@@ -1,0 +1,198 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 100vw;
+    height: auto;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    background-color: black;
+}
+
+
+nav{
+    width: 100%;
+    height: auto;
+    background-color: rgb(15, 7, 22);
+    position: relative;
+    z-index: 1000;
+}
+
+#logo{
+    position: absolute;
+    left: 2vw;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 9vh;
+}
+
+ul{
+    display: flex;
+    gap: 4vw;
+    justify-content: flex-end;
+    list-style: none;
+    padding: 2vh 5vw;
+}
+
+li a{
+    font-size: 4vh;
+    color: white;
+    text-decoration: none;
+}
+
+
+header{
+    height: 80vh;
+    position: relative;
+    overflow: hidden;
+    background-image: url(../recursos/FondoF\ .png);
+    background-size: cover;
+    background-position: center;
+}
+
+header img{
+    position: absolute;
+    bottom: 0;
+    object-fit: contain;
+    object-position: bottom;
+}
+
+#freddy {
+    width: 100%;
+    height: 100%;
+    right: 0;
+    transition: left .3s ease-in-out;
+}
+
+#Michael {
+    width: 100%;
+    height: 100%;
+    right: 0;
+    transition: left .2s ease-in-out;
+}
+
+#texto{
+    right: 30%;
+    height: 100%;
+    width: auto;
+    bottom: 0;
+    transition: right .1s ease-in-out; 
+}
+
+.titulo {
+    position: absolute;
+    color: white;
+    font-size: 10vh;
+    top: 40%;
+    left: 2%;
+    transform: translateY(-50%);
+    margin: 6vh;
+    box-shadow: 5px 0px 0px 0px white;
+    transition: left .1s ease-in-out;
+}
+
+main{
+    height: 1vh;
+}
+
+.seccion-minijuegos {
+    display: grid;
+    grid-template-columns: 40% 55%;
+    gap: 5%;
+    margin-left: 5%;
+    margin-top: 40px;
+    align-items: start;
+}
+
+.grid-minijuego {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    width: 100%;
+}
+
+.imagenM {
+    aspect-ratio: 1 / 1;
+    width: 100%;
+    border-radius: 8px;
+}
+
+.imagenM img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.texto-derecha {
+    color: white;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+}
+
+.texto-derecha h2 {
+    font-size: 5vh;
+    margin-bottom: 20px;
+    color: #f06414;
+}
+
+.texto-derecha p {
+    font-size: 2.5vh;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.contenedor-imagenes {
+    display: flex;
+    gap: 20px;
+    margin-top: -90px;
+    align-items: center;
+}
+
+.oso-flex {
+    width: 12%;
+    position: relative;  
+    height: auto;
+}
+
+#fred {
+    position: absolute;  
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+    z-index: 1000;
+}
+
+.oso-flex img {
+    width: 100%;
+    height: auto;
+}
+
+.gif-flex {
+    width: 35%;
+}
+
+.gif-flex img {
+    width: 100%;
+    height: auto;
+}
+
+.notita-flex {
+    width: 40%;
+    background: linear-gradient(135deg, #2a1a3a, #1a0f2a);
+    color: white;
+    font-size: 4vh;
+    padding: 20px;
+    border-radius: 15px;
+    border: 3px solid #f06414;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 0 0 20px rgba(240, 100, 20, 0.5);
+}

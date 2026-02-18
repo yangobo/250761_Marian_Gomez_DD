@@ -19,12 +19,12 @@ body{
 }
 
 
-/* ---------------- NAV ---------------- */
+/* paralax insipirado en el ejemplo de clase */
 
 .contenedor-1{
     width: 100%;
-    
-    min-height: 100vh;
+  
+   min-height: 100vh;
     position: relative;
     transform-style: preserve-3d;
 }
@@ -59,24 +59,21 @@ li a{
     text-decoration: none;
 }
 
-/* ---------------- HEADER 3D ---------------- */
 
 .contenedor-1::before{
     content: "";
-    position: fixed;  /* CAMBIA absolute por fixed */
+    position: fixed;  
     inset: 0;
     top: -10vh;
-    height: calc(125vh);
-
+    height: calc(130vh);
     background-image: url("../recursos/fondo1.png");
     background-size: cover;
     background-position: center;
-
-    transform: translateZ(-2px) scale(3);
+    transform: translateZ(-2.2px) scale(3);
     z-index: 1;
 }
 
-/* CAMA */
+
 .cama {
     position: absolute;
     bottom: 0;
@@ -92,7 +89,6 @@ li a{
     display: block;
 }
 
-/* NIÑO */
 .nino {
     position: absolute;
     bottom: 0%;   
@@ -103,14 +99,8 @@ li a{
     text-align: center;
 }
 
-.nino img {
-    height: 80vh;
-    width: auto;
-    display: block;
-    margin: 0 auto;
-}
 
-/* CLOSET - MÁS LENTO */
+
 .closet{
     position: absolute;
     bottom: 0;
@@ -119,7 +109,7 @@ li a{
     z-index: 4;
 }
 
-/* LUZ */
+
 .luz{
     position: absolute;
     inset: 0;
@@ -129,7 +119,7 @@ li a{
     pointer-events: none;
 }
 
-/* TITULOS - MÁS RÁPIDOS */
+
 .titulo{
     position: absolute;
     top: 40%;
@@ -153,12 +143,9 @@ li a{
     text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
     white-space: nowrap;
 }
-/* Espacio extra al final */
 
 
-/* ELIMINADO: .espacio - ya no lo necesitas */
 
-/* ---------------- GRID ---------------- */
 
 .grid-animatronicos{
     display: grid;
@@ -169,22 +156,20 @@ li a{
     position: relative;
     z-index: 100;
    
-   
-  
+ 
 }
 
-.card{
+.carta{
     position: relative;
     height: 300px;
     overflow: hidden;
     cursor: pointer;
 }
 
-.card img{
+.carta img{
     width: 100%;
     height: 100%;
     object-fit: cover;
-    
     position: absolute;
     transition: opacity .4s ease;
 }
@@ -203,11 +188,11 @@ li a{
     padding: 2rem;
 }
 
-.card:hover img{
+.carta:hover img{
     opacity: 0;
 }
 
-.card:hover .info{
+.carta:hover .info{
     opacity: 1;
 }
 
