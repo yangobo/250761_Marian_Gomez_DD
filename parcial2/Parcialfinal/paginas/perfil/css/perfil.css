@@ -1,0 +1,89 @@
+@font-face {
+    font-family: 'FNAF';
+    src: url('../../../recursos/FiveFontsatFreddy\'s-Regular.ttf');
+}
+
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+body {
+    margin: 0;
+      font-family: 'FNAF';
+    background-image: url("../recursos/fondoeditar.webp");
+    background-size: cover;       
+    background-position: center;   
+    background-repeat: no-repeat;  
+    background-attachment: fixed;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5); 
+    z-index: -1;
+}
+
+
+.contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+}
+
+
+h2 {
+    margin-bottom: 20px;
+    color: rgb(255, 255, 255);
+}
+
+
+#formPerfil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    border: white solid 1px;
+    background: rgba(255,255,255,0.05);
+    padding: 50px;
+    border-radius: 10px;
+    font-family: 'FNAF';
+}
+
+
+#formPerfil input {
+    padding: 8px;
+    width: 220px;
+    border-radius: 6px;
+    border: none;
+    font-family: 'FNAF';
+}
+
+
+#formPerfil img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 10px 0;
+}
+
+button {
+    padding: 8px 12px;
+    border: white solid 1px;
+   background-color: yellowgreen;
+    color: white;
+     font-family: 'FNAF';
+    cursor: pointer;
+}
+
+
+
+.acciones {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}

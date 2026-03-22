@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Subir personajes</title>
+    <link rel="stylesheet" href="css/subir.css">
+</head>
+<body>
+
+
+<div class="navbar">
+    <h2>Panel Administrador</h2>
+
+    <div class="user">
+
+        <button onclick="irInicio()">Inicio</button>
+
+        <div class="perfil" id="perfilBtn">
+            <img id="fotoNav">
+            <span id="nombreUsuario"></span>
+        </div>
+
+        <button onclick="cerrarSesion()">Cerrar sesión</button>
+
+    </div>
+</div>
+
+
+<div class="contenedor">
+
+    <h2>Subir archivo JSON de personajes</h2>
+
+    <div id="formSubir"></div>
+
+    <h3>Personajes cargados</h3>
+    <div id="listaPersonajes"></div>
+
+</div>
+
+<script src="js/subir.js"></script>
+
+</body>
+</html>

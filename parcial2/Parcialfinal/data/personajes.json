@@ -1,0 +1,50 @@
+[
+  {
+    "nombre": "Freddy Fazbear",
+    "juego": "Five Nights at Freddy's 1",
+    "descripcion": "Animatrónico principal y líder del grupo. Se mueve principalmente en la noche.",
+    "imagen": "../../recursos/freddyy.webp"
+  },
+  {
+    "nombre": "Chica",
+    "juego": "Five Nights at Freddy's 1",
+    "descripcion": "Animatrónico con apariencia de gallina. Ataca desde el lado derecho.",
+    "imagen": "../../recursos/chica.webp"
+  },
+  {
+    "nombre": "Foxy",
+    "juego": "Five Nights at Freddy's 1",
+    "descripcion": "Animatrónico pirata que corre hacia la oficina si no se le vigila.",
+    "imagen": "../../recursos/foxy.webp"
+  },
+  {
+    "nombre": "Bonnie",
+    "juego": "Five Nights at Freddy's 1",
+    "descripcion": "Conejo animatrónico que aparece por el lado izquierdo.",
+    "imagen": "../../recursos/bonnie.webp"
+  },
+  {
+    "nombre": "William Afton",
+    "juego": "Saga FNAF",
+    "descripcion": "Antagonista principal responsable de los incidentes.",
+    "imagen": "../../recursos/willamafton.png"
+  },
+  {
+    "nombre": "Henry Emily",
+    "juego": "Saga FNAF",
+    "descripcion": "Cofundador de la empresa y rival de Afton.",
+    "imagen": "../../recursos/henryemily.jpg"
+  },
+  {
+    "nombre": "Charlotte Emily",
+    "juego": "Saga FNAF",
+    "descripcion": "Hija de Henry, su alma posee a The Puppet.",
+    "imagen": "../../recursos/charlie.webp"
+  },
+  {
+    "nombre": "Crying Child",
+    "juego": "FNAF 4",
+    "descripcion": "Niño protagonista relacionado con los eventos principales.",
+    "imagen": "../../recursos/cryingchild.webp"
+  }
+]

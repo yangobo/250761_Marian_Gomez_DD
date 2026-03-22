@@ -1,0 +1,20 @@
+[
+  {
+    "nombre": "Shadow Bonnie",
+    "juego": "FNAF 2",
+    "descripcion": "Entidad oscura que aparece aleatoriamente y puede crashear el juego.",
+    "imagen": "../../recursos/shadowbonnie.webp"
+  },
+  {
+    "nombre": "Endoskeleton",
+    "juego": "FNAF 2",
+    "descripcion": "Esqueleto interno de los animatrónicos que aparece raramente en los pasillos.",
+    "imagen": "../../recursos/endoskeleton.webp"
+  },
+  {
+    "nombre": "Lolbit",
+    "juego": "FNAF Sister Location",
+    "descripcion": "Easter egg visual que aparece en pantallas y requiere escribir 'LOL' para desaparecer.",
+    "imagen": "../../recursos/lolbit.webp"
+  }
+]

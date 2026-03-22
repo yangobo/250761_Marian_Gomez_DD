@@ -1,0 +1,119 @@
+@font-face {
+    font-family: 'FNAF';
+    src: url('../../../recursos/FiveFontsatFreddy\'s-Regular.ttf');
+}
+
+
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+
+body {
+    margin: 0;
+   font-family: 'FNAF';
+    background: black;
+    color: white;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: rgba(0,0,0,0.3);
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.perfil {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.perfil img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+/* CONTENEDOR */
+.contenedor {
+    padding: 20px;
+    text-align: center;
+    color: rgb(71, 255, 77);
+     
+}
+
+
+#formSubir {
+       background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px); 
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.2);
+    width: 300px;
+    margin: 20px auto;
+}
+
+#formSubir input {
+    padding: 8px;
+    width: 220px;
+    border-radius: 6px;
+    border: none;
+}
+
+
+button {
+    padding: 8px 12px;
+  
+    border: white solid 1px;
+   background-color: yellowgreen;
+    color: white;
+     font-family: 'FNAF';
+    cursor: pointer;
+}
+
+
+
+h3 {
+    margin-bottom: 50px;
+}
+
+#listaPersonajes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+
+.tarjeta {
+  
+    background: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+border: white solid 1px;
+    width: 200px;
+    padding: 10px 30px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.tarjeta img {
+    width: 100%;
+    height:260px;
+    object-fit: contain;
+    border-radius: 8px;
+}
