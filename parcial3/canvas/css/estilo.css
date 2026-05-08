@@ -1,0 +1,370 @@
+/* ================= BASE ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    background: #0b0f10;
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.app {
+    display: flex;
+    gap: 0;
+    background: transparent;
+}
+
+/* ================= ICONOS ================= */
+
+.sidebar button img,
+.topbar button img,
+.menu-mobile button img {
+    width: 24px;
+    height: 24px;
+    filter: brightness(0) saturate(100%) invert(78%) sepia(32%) saturate(400%) hue-rotate(120deg);
+    pointer-events: none;
+}
+
+.sidebar button,
+.topbar button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ================= SIDEBAR ================= */
+
+.sidebar {
+    margin-top: 70px;
+    width: 90px;
+    background: #000000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 10px;
+    gap: 10px;
+    border-right: 1px solid #0a1213;
+}
+
+.sidebar button {
+    margin-top: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 16px;
+    border: none;
+    background: #132629;
+    color: #7de2d1;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.sidebar button:hover {
+    background: #1f3f44;
+    transform: scale(1.05);
+}
+
+/* ================= MAIN ================= */
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/* ================= TOPBAR ================= */
+
+.topbar {
+    width: 1000px;
+    height: 70px;
+    background: #0f1a1c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom: 1px solid #000000;
+}
+
+.topbar button {
+    padding: 10px 20px;
+    border-radius: 12px;
+    border: none;
+    background: #132629;
+    color: #7de2d1;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.topbar button:hover {
+    background: #1f3f44;
+}
+
+/* ================= CANVAS ================= */
+
+.lienzo {
+    display: block;
+    background: #ffffff;
+    box-shadow: 0 0 25px rgba(0, 255, 200, 0.08);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    width: 800px;
+    height: 640px;
+    object-fit: contain;
+}
+
+/* ================= PANEL DERECHO ================= */
+
+.panel {
+    width: 200px;
+    background: #0f1a1c;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.panel h3 {
+    margin-top: 10px;
+    color: #7de2d1;
+}
+
+.panel input {
+    width: 100%;
+}
+
+/* ================= FILTROS DESKTOP ================= */
+
+.filters {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.filters button {
+    padding: 8px 14px;
+    border-radius: 10px;
+    border: none;
+    background: #132629;
+    color: #7de2d1;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.filters button:hover {
+    background: #1f3f44;
+}
+
+/* ================= MENU MOVIL ================= */
+
+#menuToggle {
+    display: none;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 1000;
+    background: #132629;
+    color: #7de2d1;
+    border: none;
+    border-radius: 12px;
+    font-size: 22px;
+    font-weight: bold;
+    padding: 4px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#menuToggle:hover {
+    background: #1f3f44;
+    transform: scale(1.05);
+}
+
+.menu-mobile {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 80px;
+    height: 100%;
+    background: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 70px;
+    gap: 15px;
+    transition: 0.3s;
+    z-index: 999;
+}
+
+.menu-mobile.active {
+    left: 0;
+}
+
+.menu-mobile button {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    border: none;
+    background: #132629;
+    transition: 0.2s;
+}
+
+.menu-mobile button:hover {
+    background: #1f3f44;
+    transform: scale(1.05);
+}
+
+/* ================= PANEL ABAJO ================= */
+
+.panel-abajo {
+    display: none;
+    width: 100%;
+    background: #0f1a1c;
+    padding: 10px;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* CONTROLES */
+.controles-abajo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px 10px;
+    align-items: center;
+}
+
+.controles-abajo label {
+    font-size: 12px;
+    color: #7de2d1;
+}
+
+.controles-abajo input {
+    width: 100%;
+}
+
+.controles-abajo input[type="range"] {
+    height: 4px;
+}
+
+/* FILTROS MOBILE */
+.filtros-abajo {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    padding-bottom: 5px;
+}
+
+.filtros-abajo button {
+    flex: 0 0 auto;
+    font-size: 12px;
+    padding: 6px 10px;
+    background: #132629;
+    border: none;
+    color: #7de2d1;
+    border-radius: 8px;
+    white-space: nowrap;
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px){
+
+    body {
+        align-items: flex-start;
+    }
+
+    .sidebar,
+    .panel {
+        display: none;
+    }
+
+    #menuToggle {
+        display: block;
+    }
+
+    .panel-abajo {
+        display: flex;
+        width: 100%;
+    }
+
+    .topbar {
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .lienzo {
+        width: 100%;
+        height: auto;
+        border-radius: 0;
+    }
+}
+
+/* ================= MOBILE PEQUEÑO ================= */
+
+@media (max-width: 480px){
+
+    .controles-abajo {
+        grid-template-columns: 1fr;
+    }
+
+    .menu-mobile {
+        width: 70px;
+    }
+
+    .menu-mobile button {
+        width: 50px;
+        height: 50px;
+    }
+
+    #menuToggle {
+        font-size: 18px;
+        padding: 10px;
+    }
+}
+
+/* ================= TABLET ================= */
+
+@media (min-width: 769px) and (max-width: 1024px){
+
+    body {
+        align-items: flex-start;
+    }
+
+    .sidebar {
+        width: 70px;
+        padding: 10px 5px;
+    }
+
+    .sidebar button {
+        width: 50px;
+        height: 50px;
+    }
+
+    .panel {
+        width: 160px;
+        padding: 10px;
+    }
+
+    .lienzo {
+        width: 100%;
+        height: auto;
+    }
+
+    .topbar {
+        width: 100%;
+    }
+
+    #menuToggle,
+    .menu-mobile,
+    .panel-abajo {
+        display: none;
+    }
+}

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+
+<div class="app">
+
+    <div class="sidebar">
+        <button id="btn_linea"><img src="recursos/line-svgrepo-com.svg"></button>
+        <button id="btn_pincel"><img src="recursos/pencil-svgrepo-com.svg"></button>
+        <button id="btn_cuadro"><img src="recursos/square-svgrepo-com.svg"></button>
+        <button id="btn_circulo"><img src="recursos/circle-svgrepo-com.svg"></button>
+        <button id="btn_sticker"><img src="recursos/sticker-smile-circle-2-svgrepo-com.svg"></button>
+        <button id="btn_estrella"><img src="recursos/star-sharp-svgrepo-com.svg"></button>
+        <button id="btn_borrador"><img src="recursos/eraser-svgrepo-com.svg"></button>
+    </div>
+
+    <div class="main">
+
+        <div class="topbar">
+            <button class="deshacer"><img src="recursos/undo-left-round-svgrepo-com.svg"></button>
+            <button class="rehacer"><img src="recursos/redo-svgrepo-com.svg"></button>
+            <button class="guardar"><img src="recursos/save-svgrepo-com.svg"></button>
+            <button class="limpiar"><img src="recursos/delete-svgrepo-com.svg"></button>
+        </div>
+
+        <canvas id="lienzo" class="lienzo" width="800" height="640"></canvas>
+
+        <!-- PANEL DE ABAJO -->
+        <div class="panel-abajo">
+            <div class="controles-abajo">
+
+                <label>Color línea</label>
+                <input type="color" id="colorLineaMobile">
+
+                <label>Color relleno</label>
+                <input type="color" id="colorRellenoMobile">
+
+                <label>Grosor</label>
+                <input type="range" id="grosorMobile" min="1" max="50">
+
+                <label>Tamaño sticker</label>
+                <input type="range" id="tamanoStickerMobile" min="20" max="200">
+
+            </div>
+
+            <div class="filtros-abajo">
+                <button>Original</button>
+                <button>Blanco y Negro</button>
+                <button>Escala rojos</button>
+                <button>Escala verdes</button>
+                <button>Escala azules</button>
+                <button>Sepia</button>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="panel">
+
+        <h3>Opciones</h3>
+
+        <label>Color línea</label>
+        <input type="color" id="colorLinea">
+
+        <label>Color relleno</label>
+        <input type="color" id="colorRelleno">
+
+        <label>Grosor</label>
+        <input type="range" id="grosor">
+
+        <label>Tamaño sticker</label>
+        <input type="range" id="tamanoSticker">
+
+        <input type="file" id="inputSticker" style="display:none;">
+
+        <h3>Filtros</h3>
+        <div class="filters">
+            <button>Original</button>
+            <button>Blanco y negro</button>
+            <button>Escala rojos</button>
+            <button>Escala verdes</button>
+            <button>Linea azules</button>
+            <button>Sepia</button>
+        </div>
+
+    </div>
+
+    <!-- MENU CHIQUITO -->
+
+    <button id="menuToggle">☰</button>
+
+    <div id="menuMovil" class="menu-mobile">
+        <button data-tool="linea"><img src="recursos/line-svgrepo-com.svg"></button>
+        <button data-tool="pincel"><img src="recursos/pencil-svgrepo-com.svg"></button>
+        <button data-tool="cuadrado"><img src="recursos/square-svgrepo-com.svg"></button>
+        <button data-tool="circulo"><img src="recursos/circle-svgrepo-com.svg"></button>
+        <button data-tool="sticker"><img src="recursos/sticker-smile-circle-2-svgrepo-com.svg"></button>
+        <button data-tool="estrella"><img src="recursos/star-sharp-svgrepo-com.svg"></button>
+        <button data-tool="borrador"><img src="recursos/eraser-svgrepo-com.svg"></button>
+    </div>
+
+</div>
+
+<script type="module" src="scripts/canvas.js"></script>
+</body>
+</html>
